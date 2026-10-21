@@ -85,6 +85,10 @@
         background-color: #4f46e5;
     }
 
+    .pacientes-control__btn--citas {
+        background-color: #e5b346;
+    }
+
     .pacientes-control__btn--nuevo:hover {
         background-color: #4338ca;
     }
@@ -241,9 +245,6 @@
     .pacientes-control__btn-action:active {
         transform: scale(0.95);
     }
-
-    .pacientes-control__btn-action--evaluar { background-color: #059669; }
-    .pacientes-control__btn-action--evaluar:hover { background-color: #047857; }
 
     .pacientes-control__btn-action--editar { background-color: #2563eb; }
     .pacientes-control__btn-action--editar:hover { background-color: #1d4ed8; }

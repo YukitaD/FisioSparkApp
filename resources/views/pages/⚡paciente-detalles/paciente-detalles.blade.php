@@ -1,4 +1,4 @@
-    <div> {{-- Único elemento raíz obligatorio para Livewire --}}
+    <div>
         <div class="paciente-detalles">
             <a href="{{ route('home') }}" class="paciente-detalles__back">← Volver al listado</a>
             

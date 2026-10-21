@@ -4,7 +4,7 @@
         </h2>
     </x-slot>
 
-    <div> {{-- Único elemento raíz obligatorio para Livewire --}}
+    <div> 
         <div class="paciente-editar">
             {{-- Cabecera --}}
             <div class="paciente-editar__header">

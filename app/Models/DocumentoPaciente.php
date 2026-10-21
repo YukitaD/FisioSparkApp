@@ -19,7 +19,7 @@ class DocumentoPaciente extends Model
         return $this->belongsTo(Paciente::class);
     }
 
-    //MOstrar tamano legible del archivo
+    //Mostrar tamano legible del archivo
     public function getTmanañoLegibleAttribute()
     {
         $bytes = $this->tamano ?? 0;

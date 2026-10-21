@@ -249,7 +249,6 @@
     background: #dc2626;
 }
 
-/* ---------- Responsive ---------- */
 @media (max-width: 600px) {
     .paciente-detalles {
         padding: 1.25rem;

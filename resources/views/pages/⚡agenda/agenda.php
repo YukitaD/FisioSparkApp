@@ -69,7 +69,7 @@ new class extends Component
             $this->dispatch('cita-agendada');
 
         } catch (\Illuminate\Database\QueryException $e) {
-            session()->flash('error', '❌ Error al agendar la cita. Por favor, intenta nuevamente.');
+            session()->flash('error', 'Error al agendar la cita. Por favor, intenta nuevamente.');
             logger()->error('Error al agendar cita: ' . $e->getMessage());
         }
     }

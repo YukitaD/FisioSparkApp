@@ -1,4 +1,4 @@
-<div> {{-- Único elemento raíz obligatorio para Livewire --}}
+<div> 
     <div class="facturas">
 
         @if(session('message'))
