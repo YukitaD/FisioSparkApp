@@ -1,0 +1,281 @@
+/* ============================================
+   PACIENTE DETALLES
+   ============================================ */
+
+.paciente-detalles {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #1f2937;
+}
+
+/* ---------- Botón volver ---------- */
+.paciente-detalles__back {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: #4b5563;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.paciente-detalles__back:hover {
+    color: #111827;
+    text-decoration: underline;
+}
+
+/* ---------- Encabezado ---------- */
+.paciente-detalles h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+.paciente-detalles > p {
+    margin: 0.25rem 0;
+    font-size: 0.95rem;
+    color: #4b5563;
+}
+
+.paciente-detalles > p strong {
+    color: #1f2937;
+    font-weight: 600;
+}
+
+/* ---------- Botones de acciones (Editar / Borrar) ---------- */
+.paciente-detalle__actions {
+    display: flex;
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.btn {
+    padding: 0.55rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s;
+    display: inline-block;
+}
+
+.btn-editar {
+    background: #3b82f6;
+    color: #fff;
+}
+
+.btn-editar:hover {
+    background: #2563eb;
+}
+
+.btn-eliminar {
+    background: #ef4444;
+    color: #fff;
+}
+
+.btn-eliminar:hover {
+    background: #dc2626;
+}
+
+/* ---------- Mensajes flash ---------- */
+.paciente-detalles__message {
+    padding: 0.75rem 1rem;
+    margin: 1rem 0;
+    background: #d1fae5;
+    color: #065f46;
+    border-left: 4px solid #10b981;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+/* ---------- Sección de documentos ---------- */
+.paciente-detalles__documentos {
+    margin-top: 1.5rem;
+}
+
+.paciente-detalles__documentos h3 {
+    margin: 0 0 1rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+/* Formulario de subida */
+.paciente-detalles__upload {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+    padding: 1rem;
+    background: #f9fafb;
+    border: 1px dashed #d1d5db;
+    border-radius: 8px;
+    margin-bottom: 1.25rem;
+}
+
+.paciente-detalles__file-input {
+    flex: 1;
+    min-width: 200px;
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+
+.paciente-detalles__btn-subir {
+    padding: 0.55rem 1.2rem;
+    background: #10b981;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.paciente-detalles__btn-subir:hover {
+    background: #059669;
+}
+
+.paciente-detalles__btn-subir:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+}
+
+.paciente-detalles__error {
+    flex-basis: 100%;
+    color: #dc2626;
+    font-size: 0.85rem;
+}
+
+/* Listado de documentos */
+.paciente-detalles__empty {
+    padding: 1.5rem;
+    text-align: center;
+    color: #9ca3af;
+    font-size: 0.9rem;
+    background: #f9fafb;
+    border-radius: 8px;
+}
+
+.paciente-detalles__lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.paciente-detalles__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.85rem 1rem;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.paciente-detalles__item:hover {
+    background: #f3f4f6;
+}
+
+.paciente-detalles__item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    min-width: 0;
+    flex: 1;
+}
+
+.paciente-detalles__item-nombre {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #1f2937;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.paciente-detalles__item-meta {
+    font-size: 0.8rem;
+    color: #6b7280;
+}
+
+.paciente-detalles__item-acciones {
+    display: flex;
+    gap: 0.5rem;
+    flex-shrink: 0;
+}
+
+.btn-descargar {
+    padding: 0.4rem 0.85rem;
+    background: #3b82f6;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-descargar:hover {
+    background: #2563eb;
+}
+
+.btn-eliminar-doc {
+    padding: 0.4rem 0.85rem;
+    background: #ef4444;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-eliminar-doc:hover {
+    background: #dc2626;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+    .paciente-detalles {
+        padding: 1.25rem;
+        margin: 1rem;
+    }
+
+    .paciente-detalles__item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .paciente-detalles__item-acciones {
+        width: 100%;
+    }
+
+    .btn-descargar,
+    .btn-eliminar-doc {
+        flex: 1;
+    }
+
+    .paciente-detalle__actions {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}

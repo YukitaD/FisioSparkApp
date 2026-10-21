@@ -1,0 +1,208 @@
+/* Contenedor Principal */
+.paciente-registro {
+    max-width: 48rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.paciente-registro__card {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f3f4f6;
+}
+
+/* Cabecera */
+.paciente-registro__header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.paciente-registro__icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #eef2ff;
+    border-radius: 0.5rem;
+    color: #4f46e5;
+}
+
+.paciente-registro__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.paciente-registro__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0;
+}
+
+/* Alerta de Éxito */
+.paciente-registro__alert {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+    color: #065f46;
+    background-color: #ecfdf5;
+    border: 1px solid #d1fae5;
+    border-radius: 0.5rem;
+}
+
+.paciente-registro__alert-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    flex-shrink: 0;
+}
+
+/* Formulario y Filas */
+.paciente-registro__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.paciente-registro__row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+    .paciente-registro__row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Campos de Formulario */
+.paciente-registro__field {
+    display: flex;
+    flex-direction: column;
+}
+
+.paciente-registro__label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.375rem;
+}
+
+.paciente-registro__required {
+    color: #ef4444;
+}
+
+/* Entradas Estándar (Input, Select, Textarea) */
+.paciente-registro__input,
+.paciente-registro__select,
+.paciente-registro__textarea {
+    width: 100%;
+    padding: 0.625rem 0.875rem;
+    font-size: 0.875rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    background-color: #ffffff;
+    color: #111827;
+    box-sizing: border-box;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.paciente-registro__textarea {
+    resize: vertical;
+    min-height: 5rem;
+}
+
+.paciente-registro__input:focus,
+.paciente-registro__select:focus,
+.paciente-registro__textarea:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+    outline: none;
+}
+
+/* Grupo de Input Compuesto (Prefijo + Texto) */
+.paciente-registro__input-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.paciente-registro__select-prefix {
+    padding: 0.625rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    background-color: #f9fafb;
+    border: 1px solid #d1d5db;
+    border-right: none;
+    border-radius: 0.5rem 0 0 0.5rem;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.15s ease;
+}
+
+.paciente-registro__select-prefix:focus {
+    border-color: #6366f1;
+    z-index: 1;
+}
+
+.paciente-registro__input--group-right {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* Manejo de Errores */
+.paciente-registro__input--error,
+.paciente-registro__input--error.paciente-registro__input--group-right {
+    border-color: #ef4444;
+}
+
+.paciente-registro__input--error:focus {
+    border-color: #dc2626;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.2);
+}
+
+.paciente-registro__error {
+    font-size: 0.75rem;
+    color: #dc2626;
+    margin-top: 0.25rem;
+}
+
+/* Botón de Envío */
+.paciente-registro__actions {
+    margin-top: 0.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid #f3f4f6;
+}
+
+.paciente-registro__submit {
+    width: 100%;
+    padding: 0.75rem 1.25rem;
+    background-color: #4f46e5;
+    color: #ffffff;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.paciente-registro__submit:hover {
+    background-color: #4338ca;
+}
+
+.paciente-registro__submit:active {
+    transform: scale(0.98);
+}

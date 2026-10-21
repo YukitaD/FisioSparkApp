@@ -1,0 +1,228 @@
+/* ============================================
+   Módulo de Facturación
+   ============================================ */
+
+.facturas {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: #1f2937;
+}
+
+/* Flash message */
+.facturas .flash {
+    padding: 0.75rem 1rem;
+    background: #dcfce7;
+    color: #166534;
+    border-radius: 0.5rem;
+    border: 1px solid #86efac;
+    font-size: 0.9rem;
+}
+
+/* Header */
+.facturas-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.facturas-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.facturas-subtitle {
+    font-weight: 400;
+    color: #6b7280;
+}
+
+/* Cards */
+.facturas .card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+}
+
+/* Filtros */
+.filtros {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+/* Resumen */
+.resumen-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.resumen-card {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+}
+
+.resumen-blue   { background: #eff6ff; border-color: #bfdbfe; }
+.resumen-green  { background: #f0fdf4; border-color: #bbf7d0; }
+.resumen-yellow { background: #fefce8; border-color: #fde68a; }
+
+.resumen-label {
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin: 0 0 0.25rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.resumen-valor {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Formulario de pago */
+.form-pago {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto;
+    gap: 0.75rem;
+    align-items: end;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.label {
+    font-size: 0.8rem;
+    color: #374151;
+    font-weight: 500;
+}
+
+/* Inputs */
+.input {
+    width: 100%;
+    padding: 0.5rem 0.65rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.4rem;
+    font-size: 0.9rem;
+    background: #ffffff;
+    color: #1f2937;
+    transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* Botones */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border-radius: 0.4rem;
+    border: 1px solid transparent;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s, opacity 0.15s;
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+}
+
+.btn-danger {
+    background: transparent;
+    color: #dc2626;
+    border-color: #fecaca;
+    padding: 0.35rem 0.7rem;
+    font-size: 0.8rem;
+}
+
+.btn-danger:hover {
+    background: #fef2f2;
+}
+
+/* Errores */
+.error {
+    font-size: 0.75rem;
+    color: #dc2626;
+}
+
+/* Estado vacío */
+.empty {
+    color: #9ca3af;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Tabla */
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.tabla thead tr {
+    border-bottom: 2px solid #e5e7eb;
+    text-align: left;
+}
+
+.tabla th {
+    padding: 0.6rem 0.5rem;
+    font-weight: 600;
+    color: #374151;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.tabla tbody tr {
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.tabla tbody tr:hover {
+    background: #f9fafb;
+}
+
+.tabla td {
+    padding: 0.65rem 0.5rem;
+    color: #1f2937;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .resumen-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-pago {
+        grid-template-columns: 1fr;
+    }
+
+    .filtros {
+        flex-direction: column;
+    }
+}

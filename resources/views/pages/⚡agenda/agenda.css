@@ -1,0 +1,110 @@
+/* ============================================
+   Estructura base (complementa tu CSS)
+   ============================================ */
+
+.cita-card {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.cita-card__inner {
+    width: 100%;
+    max-width: 560px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 1.75rem;
+}
+
+/* Cabecera */
+.cita-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.cita-card__title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 0 0 0.25rem 0;
+}
+
+.cita-card__subtitle {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.cita-card__back-link {
+    font-size: 0.85rem;
+    color: #6b7280;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* Mensajes */
+.cita-card__message {
+    padding: 0.75rem 1rem;
+    border: 1px solid;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
+}
+
+.cita-card__message--error {
+    background-color: #fef2f2;
+    border-color: #fecaca;
+    color: #991b1b;
+}
+
+/* Campos del formulario */
+.cita-card__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.cita-card__label {
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.cita-card__input {
+    width: 100%;
+    padding: 0.55rem 0.7rem;
+    border: 1px solid;
+    border-radius: 0.4rem;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+}
+
+/* Botón */
+.cita-card__submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.65rem 1rem;
+    margin-top: 0.5rem;
+    border: none;
+    border-radius: 0.4rem;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cita-card__submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Error */
+.cita-card__error {
+    font-size: 0.8rem;
+}

@@ -1,0 +1,209 @@
+/* Contenedor Principal */
+.citas-lista {
+    max-width: 72rem;        /* Añadido: igual que pacientes-control */
+    margin: 1.5rem auto 0;   /* MODIFICADO: igual que pacientes-control */
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 0.75rem;  /* MODIFICADO: de 10rem a 0.75rem para igualar */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f3f4f6;
+}
+
+/* Cabecera */
+.citas-lista__header {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f3f4f6;
+    margin-bottom: 16px;
+    gap: 12px;
+}
+
+@media (min-width: 640px) {
+    .citas-lista__header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.citas-lista__title {
+    font-size: 32px;
+    font-weight: 500;
+    color: #1f2937;
+    margin: 0;
+}
+
+.citas-lista__subtitle {
+    font-size: 16px;
+    color: #6b7280;
+    margin-top: 0.25rem;
+}
+
+.citas-lista__new-link:hover {
+    color: #047857;
+}
+
+/* Mensajes Flash */
+.citas-lista__message {
+    margin-bottom: 12px;
+    padding: 12px;
+    font-size: 8px;
+    color: #065f46;
+    background-color: #ecfdf5;
+    border: 1px solid #d1fae5;
+    border-radius: 5px;
+}
+
+/* Sección de Filtros */
+.citas-lista__filters {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 12px;
+    background-color: #f9fafb;
+    padding: 12px;
+    border-radius: 4px;
+}
+
+@media (min-width: 640px) {
+    .citas-lista__filters {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.citas-lista__filter-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #4b5563;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+}
+
+.citas-lista__filter-input {
+    display: block;
+    width: 80%;
+    padding: 0.375rem 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    background-color: #ffffff;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.citas-lista__filter-input:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+    outline: none;
+}
+
+/* Tabla */
+.citas-lista__table-wrapper {
+  overflow-x: auto;
+  border-radius: 0.75rem;
+  border: 1px solid #f3f4f6;
+  max-width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.citas-lista__empty {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 0.875rem;
+    color: #9ca3af;
+    font-style: italic;
+}
+
+.citas-lista__table {
+    width: 100%;
+    min-width: 80%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+    text-align: left;
+}
+
+.citas-lista__table-head {
+    background-color: #f9fafb;
+    color: #6b7280;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.citas-lista__table-head th {
+    padding: 1rem 1.5rem;
+}
+
+.citas-lista__table-body td {
+ padding: 1rem 1.5rem;
+ border-bottom: 1px solid #f3f4f6;
+ white-space: nowrap;
+}
+
+.citas-lista__table-row {
+    transition: background-color 0.15s ease;
+}
+
+.citas-lista__table-row:hover {
+    background-color: rgba(249, 250, 251, 0.6);
+}
+
+/* Datos del Paciente */
+.citas-lista__patient-name {
+    font-weight: 500;
+    color: #111827;
+}
+
+.citas-lista__patient-id {
+    font-size: 0.75rem;
+    color: #9ca3af;
+}
+
+/* Badges de Estado */
+.citas-lista__badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.125rem 0.625rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.citas-lista__badge--pendiente {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.citas-lista__badge--asistida {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.citas-lista__badge--cancelada {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.citas-lista__badge--no_asistio {
+    background-color: #f3f4f6;
+    color: #1f2937;
+}
+
+/* Selector de Acciones */
+.citas-lista__action-select {
+    font-size: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    background-color: #ffffff;
+    padding: 0.25rem 0.375rem;
+    color: #4b5563;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.citas-lista__action-select:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+    outline: none;
+}
